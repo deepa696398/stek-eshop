@@ -1,0 +1,39 @@
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div>
+        <a class="" [routerLink]="['/all-products']">
+         <img src="../../../assets/logo.webp" width="200">
+        </a>
+      </div>
+      <button class="navbar-toggler x collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse" data-hover="dropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/all-products']">Our Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/favourite-products']">
+              <i class="fa fa-heart"><span class="mt-2"> {{productService.favouritProducts.length}}</span></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/my-cart']">
+              <i class="fa fa-shopping-cart"><span class="mt-2"> {{productService.cartProducts.length}}</span></i>
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="!authenticationService.currentUserValue">
+            <a class="nav-link"  [routerLink]="['/login']">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="authenticationService.currentUserValue">
+            <a class="nav-link"(click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

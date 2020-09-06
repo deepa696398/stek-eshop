@@ -1,0 +1,84 @@
+<div class="col-md-12 add-product-main-section">
+    <h5 class="page-title">Add Product</h5>
+    <div class="product-form-controls">
+        <form [formGroup]="productDetails">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="controls-lbls" for="productName">Product Name</label>
+                    <input type="text" class="input-control-type" placeholder="Product Name"
+                        formControlName="productName">
+                    <div *ngIf="submitted && f.productName.errors" class="invalid-feedback">
+                        <div *ngIf="f.productName.errors.required">productName is required
+                        </div>
+                        <div *ngIf="f.productName.errors.maxlength">Maximum(50) characters
+                            limit reached</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="controls-lbls" for="productCategory">Product Category</label>
+                    <input type="text" class="input-control-type" placeholder="Product Category"
+                        formControlName="productCategory">
+                    <div *ngIf="submitted && f.productCategory.errors" class="invalid-feedback">
+                        <div *ngIf="f.productCategory.errors.required">productCategory is required
+                        </div>
+                        <div *ngIf="f.productCategory.errors.maxlength">Maximum(50) characters
+                            limit reached</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="controls-lbls" for="productDescription">Product Description
+                    <span class="text-muted">(Optional)</span>
+                </label>
+                <textarea type="text" placeholder="Product Description"
+                    formControlName="productDescription"></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="controls-lbls" for="productPrice">Product Price</label>
+                    <input type="text" class="input-control-type" placeholder="Product Price"
+                        formControlName="productPrice">
+                    <div *ngIf="submitted && f.productPrice.errors" class="invalid-feedback">
+                        <div *ngIf="f.productPrice.errors.required">productPrice is required
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="controls-lbls" for="productQuatity">Product Quantity</label>
+                    <input type="text" class="input-control-type" placeholder="Product Quantity"
+                        formControlName="productQuatity">
+                    <div *ngIf="submitted && f.productQuatity.errors" class="invalid-feedback">
+                        <div *ngIf="f.productQuatity.errors.required">productQuatity is required
+                        </div>
+                        <div *ngIf="f.productQuatity.errors.maxlength">Maximum(50) characters
+                            limit reached</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="controls-lbls" for="deviceType">Product Seller</label>
+                <input type="text" class="input-control-type" placeholder="Product Seller"
+                    formControlName="deviceType">
+                <div *ngIf="submitted && f.deviceType.errors" class="invalid-feedback">
+                    <div *ngIf="f.deviceType.errors.required">deviceType is required
+                    </div>
+                    <div *ngIf="f.deviceType.errors.maxlength">Maximum(50) characters
+                        limit reached</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="controls-lbls" for="productImageUrl">Product Image Url</label>
+                <input type="text" class="input-control-type" placeholder="Product Image Url"
+                    formControlName="productImageUrl">
+            </div>
+        </form>
+        <div class="add-product-btns">
+            <a class="cancel-btn btn btn-primary" href="/"><span class="btn-text">Cancel</span></a>
+
+            <button class="add-btn btn btn-primary btn-submit" (click)="onSubmit()"><span
+                    class="btn-text">Add</span></button>
+        </div>
+    </div>
+</div>

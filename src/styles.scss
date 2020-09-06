@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "HindSiliguri-Regular";
+    src        : url("../src/assets/font/Hind_Siliguri/HindSiliguri-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style : normal;
+}
+
+@font-face {
+    font-family: "HindSiliguri-Bold";
+    src        : url("../src/assets/font/Hind_Siliguri/HindSiliguri-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style : normal;
+}
+
+@font-face {
+    font-family: "HindSiliguri-Medium";
+    src        : url("../src/assets/font/Hind_Siliguri/HindSiliguri-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style : normal;
+}
+
+@font-face {
+    font-family: "HindSiliguri-SemiBold";
+    src        : url("../src/assets/font/Hind_Siliguri/HindSiliguri-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style : normal;
+}
+
+@font-face {
+    font-family: "HindSiliguri-Light";
+    src        : url("../src/assets/font/Hind_Siliguri/HindSiliguri-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style : normal;
+}
+
+body {
+    width      : 100vw;
+    overflow-x : hidden;
+    font-family: HindSiliguri-Regular !important;
+}
+.card.card-sub.narrower {
+    margin-top: 10px;
+  }
+
+  .card.card-sub {
+    width: 100%;
+  }
+
+  .card:not([class*="card-outline-"]) {
+    border: 0;
+  }
+
+  .card.card-sub.narrower .view {
+    margin-left : 4%;
+    margin-right: 4%;
+    margin-top  : -20px;
+  }
+
+  .card.card-sub .view {
+    border-radius: 4px;
+  }
+
+  .card.card-sub .card-body {
+    padding-top: 1.8rem;
+  }
+
+  .btn .fa,
+  .card .card-body {
+    position: relative;
+  }
+
+  .card .card-body .card-title a {
+    color: var(--navBackground) !important;
+  }
+
+  .card-text {
+    line-height: 20px;
+    height     : 60px;
+    overflow   : hidden;
+  }
+
+  .card .card-footer {
+    background-color: transparent;
+  }
+
+  .card .card-footer .left {
+    float: left;
+  }
+
+  .card .card-footer .right {
+    float  : right;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .card .card-footer .right a.active {
+    color: #d50000;
+  }
+
+  .card .card-footer .right a {
+    color             : #757575;
+    margin-left       : 1rem;
+    -webkit-transition: 0.4s;
+    transition        : 0.4s;
+  }
+
+  .imesgs-icons {
+    cursor: pointer;
+  }
+
+  .imesgs-icons-selected {
+    color: #d50000;
+  }
+
+@media (min-width: 991.99px) {}
